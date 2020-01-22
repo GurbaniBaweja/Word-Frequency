@@ -1,0 +1,14 @@
+Name: Gurbani Baweja
+Project Name: Word Frequency
+
+Imported Functions:
+* sys
+
+Notes and Assumptions:
+
+The file freq.py has three functions namely check_commandLine(), ReadandCount(read_file) and out_table(w_dict,f_name).The first function check_commandLine() makes use of the if-elif-else statements to check if the user has input the command-line in the correct format. This is done by checking the length of the list sys.argv which is a list made by the sys function which contains the tokens passed on the command-line.This function also returns the name of the file which is at the first index of sys.argv if the user has given input in the correct format.
+
+The second function ReadandCount(read_file) reads the file given by the user and makes a list called Word_List of all the words present in the file. This is achieved by using the split() function. Then the number of times each word appears in the file is found using a dictionary called word_dict. This is done by checking whether the word in the file is present in the dictionary or not. If the word is not present in the dictionary it is added to it and then the number of times the word appears is counted.Then the third function called out_table(w_dict,f_name) is called from within the function and the dictionary and file name are passed into it as arguments.
+
+The third function, out_table(w_dict,f_name) puts the dictioanry keys i.e., the words in the file in a lexicographic order by using the sorted function.It then finds the frequency of each word by dividing it's count with the total word count.Using the round() function, the frequencies are rounded to 3 decimal places. The contents of the table are put in a list, then converted to a string and ultimately written to a file called file_name_input.out (where file_name_input is the file name given by user) using .write() 
+
